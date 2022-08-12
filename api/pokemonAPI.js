@@ -23,7 +23,8 @@ export const getPokemon = async (id) => {
         name: pokemon.name,
         sprites: pokemon.sprites,
         image: pokemon.sprites.other.dream_world.front_default,
-        id
+        id,
+        index: pokemon.id,
     }
 }
 
