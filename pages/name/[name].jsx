@@ -15,8 +15,6 @@ const PokemonByNamePage = ({pokemon}) => {
   const router = useRouter();
   const [isInFavorites, setIsInFavorites] = useState();
 
-    console.log({pokemon});
-
   const onToggleFavorite = () => {
       toggleFavorites(index);
       if(existeInFavorites(index)){
