@@ -10,14 +10,16 @@ import { capitalizedName, confettiFire, existeInFavorites, toggleFavorites } fro
 
 const PokemonByNamePage = ({pokemon}) => {
 
-  const { name, sprites, image, id } = pokemon;
+  const { name, sprites, image, id, index } = pokemon;
 
   const router = useRouter();
   const [isInFavorites, setIsInFavorites] = useState();
 
+    console.log({pokemon});
+
   const onToggleFavorite = () => {
-      toggleFavorites(id);
-      if(existeInFavorites(id)){
+      toggleFavorites(index);
+      if(existeInFavorites(index)){
           setIsInFavorites(true);
           confettiFire();
       }else{
